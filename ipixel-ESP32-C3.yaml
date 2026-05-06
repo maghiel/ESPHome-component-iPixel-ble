@@ -208,15 +208,15 @@ sensor:
 number:
   - platform: ipixel_ble
     annimation_mode:
-      name: "Annimation Mode"
+      name: "Animation Mode"
       id: annimation_mode
       icon: mdi:animation-outline
     annimation_speed:
-      name: "Annimation Speed"
+      name: "Animation Speed"
       id: annimation_speed
       icon: mdi:play-speed
     clock_style:
-      name: "Clock style"
+      name: "Clock Style"
       id: clock_style
       icon: mdi:clock-digital
     font_flag:
