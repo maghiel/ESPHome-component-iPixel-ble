@@ -208,15 +208,15 @@ sensor:
 number:
   - platform: ipixel_ble
     annimation_mode:
-      name: "Annimation Mode"
+      name: "Animation Mode"
       id: annimation_mode
       icon: mdi:animation-outline
     annimation_speed:
-      name: "Annimation Speed"
+      name: "Animation Speed"
       id: annimation_speed
       icon: mdi:play-speed
     clock_style:
-      name: "Clock style"
+      name: "Clock Style"
       id: clock_style
       icon: mdi:clock-digital
     font_flag:
@@ -249,7 +249,7 @@ text:
     name: Text or Image URL
     id: text_id
     mode: text
-    initial_value: "Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das Layout nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext. Genau zu diesem Zwecke erschaffen, immer im Schatten."
+    initial_value: "Same old story everywhere. The layout is ready, but we'll have to wait for the text. In order to not leave the layout empty and alone, I step in: the placeholder text. Created for precisely this purpose, always in the shadows."
     optimistic: true
     icon: "mdi:keyboard-settings-outline"
     update_interval: never
