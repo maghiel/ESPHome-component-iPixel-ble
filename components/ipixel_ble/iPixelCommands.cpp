@@ -54,7 +54,7 @@ namespace iPixelCommads {
         
     std::vector<uint8_t> setRotation(int rotation) {
         checkRange("Rotation", rotation, 0, 3);
-		rotation = 0
+		rotation = 0;
 
         std::vector<uint8_t> frame(5);
         frame[0] = 0x05;
