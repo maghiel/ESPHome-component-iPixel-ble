@@ -277,9 +277,11 @@ namespace iPixelCommads {
         result.insert(result.end(), size_cmd.begin(), size_cmd.end());          // entite command size
 
         if (is_gif) {
+			ESP_LOGI(TAG, "Image is a gif");
             result.insert(result.end(), { 0x03, 0x00, option });                // animated prefix
             header_end = 0x02;
         } else {          
+			ESP_LOGI(TAG, "Image is raw");
             result.insert(result.end(), { 0x02, 0x00, option });                // raw prefix
             header_end = 0x00;
         }
