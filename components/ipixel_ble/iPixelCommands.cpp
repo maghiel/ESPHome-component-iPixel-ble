@@ -54,6 +54,7 @@ namespace iPixelCommads {
         
     std::vector<uint8_t> setRotation(int rotation) {
         checkRange("Rotation", rotation, 0, 3);
+		rotation = 0
 
         std::vector<uint8_t> frame(5);
         frame[0] = 0x05;
@@ -251,6 +252,7 @@ namespace iPixelCommads {
 
     std::vector<uint8_t> showImage(const std::vector<uint8_t> &data, uint8_t save_slot, uint8_t chunk_index, bool is_gif,
                                    size_t total_size, std::vector<uint8_t> total_crc) {
+		is_gif = true;
         size_t size = data.size();
         size_t max_size = 12*1024L;
         std::vector<uint8_t> result;
