@@ -628,7 +628,7 @@ void IPixelBLE::load_image_effect(int8_t page) {
 }
 
 void IPixelBLE::load_gif_effect() {
-  if (state_.mEffect == LoadGIF {
+  if (state_.mEffect == LoadGIF) {
 	  Display::do_update_(); // call display lambda writer
   }
 	  
