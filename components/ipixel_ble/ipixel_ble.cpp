@@ -627,12 +627,8 @@ void IPixelBLE::load_image_effect(int8_t page) {
   }
 }
 
-void IPixelBLE::load_gif_effect(int8_t page) {
+void IPixelBLE::load_gif_effect() {
   if (state_.mEffect == LoadGIF || is_starting()) {
-    if (page >= 0 && page < 16) {
-      state_.mSlotNumber = page;
-      if (lambda_slot_number_ != nullptr) lambda_slot_number_->publish_state(page);
-    }
     Display::do_update_(); // call display lambda writer
     queuePush( iPixelCommads::showImage( state_.framebuffer_, get_slot() ) );	  
   }
