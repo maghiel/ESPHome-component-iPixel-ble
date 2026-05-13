@@ -627,7 +627,7 @@ void IPixelBLE::load_image_effect(int8_t page) {
   }
 }
 
-void IPixelBLE::load_gif_effect() {
+void IPixelBLE::load_gif_effect(int8_t page) {
   if (state_.mEffect == LoadGIF || is_starting()) {
     if (page >= 0 && page < 16) {
       state_.mSlotNumber = page;
