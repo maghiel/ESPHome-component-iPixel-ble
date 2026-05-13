@@ -86,10 +86,10 @@ void IPixelBLE::loop() {
 		load_image_effect();
       } 
 
-      if (this->last_update_ + 5000 < tick) {
-        this->last_update_ = tick;
-        load_gif_effect();  // loads a entire RGB frame, do not stress the BLE connection to much
-      }
+      // if (this->last_update_ + 5000 < tick) {
+      //   this->last_update_ = tick;
+      //   load_gif_effect();  // loads a entire RGB frame, do not stress the BLE connection to much
+      // }
     }
     queueTick();
     downloadTick();
@@ -628,10 +628,10 @@ void IPixelBLE::load_image_effect(int8_t page) {
 }
 
 void IPixelBLE::load_gif_effect() {
-  if (state_.mEffect == LoadGIF || is_starting()) {
-    Display::do_update_(); // call display lambda writer
-    queuePush( iPixelCommads::showImage( state_.framebuffer_, get_slot() ) );	  
+  if (state_.mEffect == LoadGIF {
+	  Display::do_update_(); // call display lambda writer
   }
+	  
 }
 
 void IPixelBLE::fill_color_effect() {
