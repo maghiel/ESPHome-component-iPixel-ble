@@ -27,7 +27,7 @@ namespace iPixelCommads {
     std::vector<uint8_t> showRhythmLevels(int style, const int levels[11]);
     std::vector<uint8_t> showRhythmAnimation(int style, int frameNumber);
     std::vector<uint8_t> showText(const std::string &text, uint8_t animation, uint8_t speed, esphome::Color txt_color,  uint8_t rainbow_mode, uint8_t font_flag, uint8_t save_slot = 1, esphome::Color bg_color = {0, 0, 0});
-    std::vector<uint8_t> showImage(const std::vector<uint8_t> &data, uint8_t save_slot = 1, uint8_t chunk_index = 0, bool is_gif = true, size_t total_size = 0L, std::vector<uint8_t> total_crc = std::vector<uint8_t>{});
+    std::vector<uint8_t> showImage(const std::vector<uint8_t> &data, uint8_t save_slot = 1, uint8_t chunk_index = 0, bool is_gif = false, size_t total_size = 0L, std::vector<uint8_t> total_crc = std::vector<uint8_t>{});
     // program 
     std::vector<uint8_t> setProgramList(const std::vector<uint8_t> &slots);
     std::vector<uint8_t> delProgramList(const std::vector<uint8_t> &slots);

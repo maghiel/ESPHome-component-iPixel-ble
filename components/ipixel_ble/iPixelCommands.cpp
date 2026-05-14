@@ -54,7 +54,6 @@ namespace iPixelCommads {
         
     std::vector<uint8_t> setRotation(int rotation) {
         checkRange("Rotation", rotation, 0, 3);
-		rotation = 0;
 
         std::vector<uint8_t> frame(5);
         frame[0] = 0x05;
@@ -252,7 +251,6 @@ namespace iPixelCommads {
 
     std::vector<uint8_t> showImage(const std::vector<uint8_t> &data, uint8_t save_slot, uint8_t chunk_index, bool is_gif,
                                    size_t total_size, std::vector<uint8_t> total_crc) {
-		is_gif = true;
         size_t size = data.size();
         size_t max_size = 12*1024L;
         std::vector<uint8_t> result;
@@ -277,11 +275,9 @@ namespace iPixelCommads {
         result.insert(result.end(), size_cmd.begin(), size_cmd.end());          // entite command size
 
         if (is_gif) {
-			ESP_LOGI(TAG, "Image is a gif");
             result.insert(result.end(), { 0x03, 0x00, option });                // animated prefix
             header_end = 0x02;
         } else {          
-			ESP_LOGI(TAG, "Image is raw");
             result.insert(result.end(), { 0x02, 0x00, option });                // raw prefix
             header_end = 0x00;
         }
